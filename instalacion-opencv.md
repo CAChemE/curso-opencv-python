@@ -17,8 +17,11 @@ Comandos para instalar OpenCV con Python (Windows 7 64):
   `conda install jupyter matplotlib scipy`
 
 6. Instalación de ffmpeg para poder utilizar archivos de vídeo como input
+
   `conda install -c conda-forge ffmpeg=2.8.6`
 
+
+---
 
 Log de instalación:
 
