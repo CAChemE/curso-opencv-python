@@ -4,14 +4,16 @@ Comandos para instalar OpenCV con Python (Windows 7 64):
 2. Creación de entorno en ventana de comandos:
 
   `conda create --name pyOCV python==3.5.1`
+  
 3. Activación de entorno:
 
   `activate pyOCV`
-4. Instalación de OpenCV junto a sus dependencias (mínimas):
+4. Instalación de OpenCV junto a sus dependencias (mínimas)
 
-`conda install -c conda-forge opencv=3.1.0`
-
+  `conda install -c conda-forge opencv=3.1.0`
+ 
 5. Instalación de librerías auxiliares para el curso
+
 `conda install jupyter matplotlib scipy`
 
 Log de instalación:
