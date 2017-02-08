@@ -14,7 +14,11 @@ Comandos para instalar OpenCV con Python (Windows 7 64):
  
 5. Instalación de librerías auxiliares para el curso
 
-`conda install jupyter matplotlib scipy`
+  `conda install jupyter matplotlib scipy`
+
+6. Instalación de ffmpeg para poder utilizar archivos de vídeo como input
+  `conda install -c conda-forge ffmpeg=2.8.6`
+
 
 Log de instalación:
 
@@ -150,6 +154,21 @@ nbformat-4.2.0 100% |###############################| Time: 0:00:00   2.74 MB/s
 ipykernel-4.5. 100% |###############################| Time: 0:00:00   2.82 MB/s
 notebook-4.3.1 100% |###############################| Time: 0:00:02   2.41 MB/s
 ipywidgets-5.2 100% |###############################| Time: 0:00:00   4.25 MB/s
+
+
+(pyOCV) C:\Users\franz\Desktop\OpenCV-intro>conda install -c conda-forge ffmpeg=2.8.6
+Fetching package metadata ...............
+Solving package specifications: .
+
+Package plan for installation in environment C:\Users\franz\Miniconda3\envs\pyOCV:
+
+The following NEW packages will be INSTALLED:
+
+    ffmpeg: 2.8.6-4 conda-forge
+
+Proceed ([y]/n)? y
+
+ffmpeg-2.8.6-4 100% |###############################| Time: 0:00:07   2.07 MB/s
 
 (pyOCV) C:\Users\franz>
 ```
