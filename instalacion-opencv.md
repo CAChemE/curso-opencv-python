@@ -7,6 +7,7 @@ Comandos para instalar OpenCV con miniconda ([DOC](https://conda.io/docs/using/e
 1. Actualiza conda a la última versión disponible y crea un entorno desde la ventana de comandos o terminal:
 
   `conda update conda`
+  
   `conda create --name pyOCV python==3.5.0`
   
 2. Activación de entorno:
