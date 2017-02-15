@@ -1,50 +1,63 @@
-Comandos para instalar OpenCV con Python (Windows 7 64):
+Comandos para instalar OpenCV con miniconda ([DOC](https://conda.io/docs/using/envs.html)) y Python (Windows 7 64):
 
-1. Instalación de [miniconda con Python 3.5 (64-bit)](https://conda.io/miniconda.html)
-2. Creación de entorno en ventana de comandos:
+** Si ya tienes Anaconda o miniconda instalado en tu ordenador, omite el siguiente paso**
+0. Instala [miniconda con Python 3.5 (64-bit)](https://conda.io/miniconda.html)
 
-  `conda create --name pyOCV python==3.5.1`
+1. Actualiza conda a la última versión disponible y crea un entorno desde la ventana de comandos o terminal:
+  `conda update conda`
+  `conda create --name pyOCV python==3.5.0`
   
-3. Activación de entorno:
+2. Activación de entorno:
 
-  `activate pyOCV`
-4. Instalación de OpenCV junto a sus dependencias (mínimas)
+  Windows: `activate pyOCV` 
+  Linux/Mac: `$source activate pyOCV`
+  
+  **Comprueba que la ventana de comandos se ha activado el entorno correctamente (aparece junto a la ruta).**
+  
+3. Instalación de OpenCV junto a sus dependencias (mínimas)
 
-  `conda install -c conda-forge opencv=3.1.0`
+  `conda install -c menpo opencv3=3.1`
  
-5. Instalación de librerías auxiliares para el curso
+4. Instalación de librerías auxiliares para el curso
 
   `conda install jupyter matplotlib scipy`
+  
+5. Comprueba que eres capaz de ejecutar el script `test_playvideo.py`
 
-6. Instalación de ffmpeg para poder utilizar archivos de vídeo como input
-
-  `conda install -c conda-forge ffmpeg=2.8.6`
-
+  `python test_playvideo.py`
 
 ---
 
 Log de instalación:
 
 ```
-C:\Users\franz>conda create --name pyOCV python==3.5.1
+C:\Users\franz\Desktop\OpenCV-intro>conda update conda
 Fetching package metadata .............
 Solving package specifications: .
 
-Package plan for installation in environment C:\Users\franz\Miniconda3\envs\pyOCV:
+# All requested packages already installed.
+# packages in environment at C:\Users\franz\Miniconda3:
+#
+conda                     4.3.11                   py35_0
+
+C:\Users\franz\Desktop\OpenCV-intro>conda create --name pyOCV python==3.5.0
+Fetching package metadata .............
+Solving package specifications: .
+
+Package plan for installation in environment C:\Users\franz\Miniconda3\envs\pyO
 
 The following NEW packages will be INSTALLED:
 
-    pip:            9.0.1-py35_1
-    python:         3.5.1-5
-    setuptools:     27.2.0-py35_1
-    vs2015_runtime: 14.0.25123-0
-    wheel:          0.29.0-py35_0
+    msvc_runtime: 1.0.1-vc14_0  [vc14]
+    pip:          9.0.1-py35_1
+    python:       3.5.0-4
+    setuptools:   27.2.0-py35_1
+    wheel:        0.29.0-py35_0
 
 Proceed ([y]/n)? y
 
-python-3.5.1-5 100% |###############################| Time: 0:00:13   2.26 MB/s
-setuptools-27. 100% |###############################| Time: 0:00:00   2.43 MB/s
-pip-9.0.1-py35 100% |###############################| Time: 0:00:00   2.42 MB/s
+msvc_runtime-1 100% |###############################| Time: 0:00:01   1.75 MB/s
+python-3.5.0-4 100% |###############################| Time: 0:00:09   2.86 MB/s
 #
 # To activate this environment, use:
 # > activate pyOCV
@@ -56,9 +69,9 @@ pip-9.0.1-py35 100% |###############################| Time: 0:00:00   2.42 MB/s
 #
 
 
-C:\Users\franz>activate pyOCV
+C:\Users\franz\Desktop\OpenCV-intro>activate pyOCV
 
-(pyOCV) C:\Users\franz>conda install -c conda-forge opencv=3.1.0
+(pyOCV) C:\Users\franz\Desktop\OpenCV-intro>conda install -c menpo opencv3=3.1
 Fetching package metadata ...............
 Solving package specifications: .
 
@@ -66,56 +79,50 @@ Package plan for installation in environment C:\Users\franz\Miniconda3\envs\pyOC
 
 The following NEW packages will be INSTALLED:
 
-    jpeg:    9b-vc14_0         conda-forge [vc14]
-    libpng:  1.6.28-vc14_0     conda-forge [vc14]
-    libtiff: 4.0.6-vc14_7      conda-forge [vc14]
     mkl:     2017.0.1-0
-    numpy:   1.11.3-py35_0
-    opencv:  3.1.0-np111py35_1 conda-forge
-    vc:      14-0              conda-forge
-    zlib:    1.2.11-vc14_0     conda-forge [vc14]
+    numpy:   1.12.0-py35_0
+    opencv3: 3.1.0-py35_0  menpo
 
 Proceed ([y]/n)? y
 
-mkl-2017.0.1-0 100% |###############################| Time: 0:00:56   2.39 MB/s
-jpeg-9b-vc14_0 100% |###############################| Time: 0:00:00 422.00 kB/s
-vc-14-0.tar.bz 100% |###############################| Time: 0:00:00  59.34 kB/s
-zlib-1.2.11-vc 100% |###############################| Time: 0:00:00 247.34 kB/s
-libpng-1.6.28- 100% |###############################| Time: 0:00:00 824.26 kB/s
-libtiff-4.0.6- 100% |###############################| Time: 0:00:00   1.47 MB/s
-numpy-1.11.3-p 100% |###############################| Time: 0:00:01   2.43 MB/s
-opencv-3.1.0-n 100% |###############################| Time: 0:00:42   2.10 MB/s
+numpy-1.12.0-p 100% |###############################| Time: 0:00:01   2.90 MB/s
+opencv3-3.1.0- 100% |###############################| Time: 0:00:26   1.67 MB/s
 
-(pyOCV) C:\Users\franz>conda install jupyter scipy matplotlib
-Fetching package metadata .............
+(pyOCV) C:\Users\franz\Desktop\OpenCV-intro>conda install jupyter matplotlib scipy
+Fetching package metadata ...............
 Solving package specifications: .
 
 Package plan for installation in environment C:\Users\franz\Miniconda3\envs\pyOCV:
 
 The following NEW packages will be INSTALLED:
 
+    bleach:              1.5.0-py35_0
     colorama:            0.3.7-py35_0
     cycler:              0.10.0-py35_0
     decorator:           4.0.11-py35_0
-    entrypoints:         0.2.2-py35_0
-    icu:                 57.1-vc14_0        [vc14]
+    entrypoints:         0.2.2-py35_1
+    html5lib:            0.999-py35_0
+    icu:                 57.1-vc14_0              [vc14]
     ipykernel:           4.5.2-py35_0
     ipython:             5.1.0-py35_0
     ipython_genutils:    0.1.0-py35_0
-    ipywidgets:          5.2.2-py35_1
+    ipywidgets:          5.1.5-py35_0       menpo
     jinja2:              2.9.4-py35_0
+    jpeg:                9b-vc14_0                [vc14]
     jsonschema:          2.5.1-py35_0
     jupyter:             1.0.0-py35_3
     jupyter_client:      4.4.0-py35_0
     jupyter_console:     5.0.0-py35_0
     jupyter_core:        4.2.1-py35_0
+    libpng:              1.6.27-vc14_0            [vc14]
     markupsafe:          0.23-py35_2
-    matplotlib:          2.0.0-np111py35_0
+    matplotlib:          2.0.0-np112py35_0
     mistune:             0.7.3-py35_0
-    nbconvert:           4.2.0-py35_0
+    nbconvert:           5.1.1-py35_0
     nbformat:            4.2.0-py35_0
     notebook:            4.3.1-py35_1
-    openssl:             1.0.2k-vc14_0      [vc14]
+    openssl:             1.0.2k-vc14_0            [vc14]
+    pandocfilters:       1.4.1-py35_0
     path.py:             10.0-py35_0
     pickleshare:         0.7.4-py35_0
     prompt_toolkit:      1.0.9-py35_0
@@ -125,53 +132,34 @@ The following NEW packages will be INSTALLED:
     python-dateutil:     2.6.0-py35_0
     pytz:                2016.10-py35_0
     pyzmq:               16.0.2-py35_0
-    qt:                  5.6.2-vc14_3       [vc14]
+    qt:                  5.6.2-vc14_3             [vc14]
     qtconsole:           4.2.1-py35_2
-    scipy:               0.18.1-np111py35_1
+    scipy:               0.18.1-np112py35_1
     simplegeneric:       0.8.1-py35_1
     sip:                 4.18-py35_0
     six:                 1.10.0-py35_0
-    tk:                  8.5.18-vc14_0      [vc14]
+    testpath:            0.3-py35_0
+    tk:                  8.5.18-vc14_0            [vc14]
     tornado:             4.4.2-py35_0
     traitlets:           4.3.1-py35_0
+    vs2015_runtime:      14.0.25123-0
     wcwidth:             0.1.7-py35_0
-    widgetsnbextension:  1.2.6-py35_0
+    widgetsnbextension:  1.2.3-py35_1       menpo
     win_unicode_console: 0.5-py35_0
+    zlib:                1.2.8-vc14_3             [vc14]
 
 Proceed ([y]/n)? y
 
-openssl-1.0.2k 100% |###############################| Time: 0:00:02   2.35 MB/s
-decorator-4.0. 100% |###############################| Time: 0:00:00 928.85 kB/s
-path.py-10.0-p 100% |###############################| Time: 0:00:00   3.24 MB/s
-pytz-2016.10-p 100% |###############################| Time: 0:00:00   2.29 MB/s
-pyzmq-16.0.2-p 100% |###############################| Time: 0:00:00   2.44 MB/s
-jinja2-2.9.4-p 100% |###############################| Time: 0:00:00   2.63 MB/s
-prompt_toolkit 100% |###############################| Time: 0:00:00   2.65 MB/s
-python-dateuti 100% |###############################| Time: 0:00:00   2.53 MB/s
-qt-5.6.2-vc14_ 100% |###############################| Time: 0:00:24   2.39 MB/s
-scipy-0.18.1-n 100% |###############################| Time: 0:00:05   2.40 MB/s
-jupyter_core-4 100% |###############################| Time: 0:00:00   2.32 MB/s
-pyqt-5.6.0-py3 100% |###############################| Time: 0:00:01   2.40 MB/s
-matplotlib-2.0 100% |###############################| Time: 0:00:03   2.40 MB/s
-nbformat-4.2.0 100% |###############################| Time: 0:00:00   2.74 MB/s
-ipykernel-4.5. 100% |###############################| Time: 0:00:00   2.82 MB/s
-notebook-4.3.1 100% |###############################| Time: 0:00:02   2.41 MB/s
-ipywidgets-5.2 100% |###############################| Time: 0:00:00   4.25 MB/s
+entrypoints-0. 100% |###############################| Time: 0:00:00   1.04 MB/s
+pandocfilters- 100% |###############################| Time: 0:00:00   1.15 MB/s
+testpath-0.3-p 100% |###############################| Time: 0:00:00   1.72 MB/s
+html5lib-0.999 100% |###############################| Time: 0:00:00   1.90 MB/s
+scipy-0.18.1-n 100% |###############################| Time: 0:00:03   3.09 MB/s
+bleach-1.5.0-p 100% |###############################| Time: 0:00:00   1.86 MB/s
+matplotlib-2.0 100% |###############################| Time: 0:00:02   3.14 MB/s
+nbconvert-5.1. 100% |###############################| Time: 0:00:00   3.55 MB/s
+widgetsnbexten 100% |###############################| Time: 0:00:03 388.75 kB/s
+ipywidgets-5.1 100% |###############################| Time: 0:00:00 381.78 kB/s
 
-
-(pyOCV) C:\Users\franz\Desktop\OpenCV-intro>conda install -c conda-forge ffmpeg=2.8.6
-Fetching package metadata ...............
-Solving package specifications: .
-
-Package plan for installation in environment C:\Users\franz\Miniconda3\envs\pyOCV:
-
-The following NEW packages will be INSTALLED:
-
-    ffmpeg: 2.8.6-4 conda-forge
-
-Proceed ([y]/n)? y
-
-ffmpeg-2.8.6-4 100% |###############################| Time: 0:00:07   2.07 MB/s
-
-(pyOCV) C:\Users\franz>
+(pyOCV) C:\Users\franz\Desktop\OpenCV-intro>
 ```
