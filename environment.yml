@@ -1,6 +1,7 @@
 name: pyOCV
 channels: !!python/tuple
 - conda-forge
+- menpo
 - defaults
 dependencies:
 - conda-forge::certifi=2017.1.23=py35_0
