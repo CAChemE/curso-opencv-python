@@ -27,7 +27,7 @@ Testeado en Windows 7 x64:
 
   `conda install jupyter matplotlib scipy`
   
-5. Comprueba que eres capaz de ejecutar el script `test_playvideo.py`
+5. [Descarga este repositorio](https://github.com/CAChemE/curso-opencv-python/archive/master.zip) y comprueba que eres capaz de ejecutar el script `test_playvideo.py`
 
   `python test_playvideo.py`
 
