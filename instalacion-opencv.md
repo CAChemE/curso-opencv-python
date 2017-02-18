@@ -1,5 +1,6 @@
-Comandos para instalar OpenCV con miniconda ([DOC](https://conda.io/docs/using/envs.html)) y Python 3. Testeado en Windows 7 x64:
+Comandos para instalar OpenCV con miniconda ([DOC](https://conda.io/docs/using/envs.html)) y Python 3 para Windows, Mac o Linux.
 
+Testeado en Windows 7 x64:
 
 
 0. Si aún no tienes Anaconda o miniconda instalado en tu ordenador: descarga e instala [miniconda con Python 3.5 (64-bit)](https://conda.io/miniconda.html)
