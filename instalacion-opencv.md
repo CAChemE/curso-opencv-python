@@ -25,7 +25,7 @@ Testeado en Windows 7 x64:
  
 4. Instalación de librerías auxiliares para el curso
 
-  `conda install jupyter matplotlib`
+  `conda install jupyter matplotlib scipy`
   
 5. [Descarga este repositorio](https://github.com/CAChemE/curso-opencv-python/archive/master.zip) y comprueba que eres capaz de ejecutar el script `test_playvideo.py`
 
@@ -93,7 +93,7 @@ Proceed ([y]/n)? y
 numpy-1.12.0-p 100% |###############################| Time: 0:00:01   2.90 MB/s
 opencv3-3.1.0- 100% |###############################| Time: 0:00:26   1.67 MB/s
 
-(pyOCV) C:\Users\franz\Desktop\OpenCV-intro>conda install jupyter matplotlib 
+(pyOCV) C:\Users\franz\Desktop\OpenCV-intro>conda install jupyter matplotlib scipy
 Fetching package metadata ...............
 Solving package specifications: .
 
