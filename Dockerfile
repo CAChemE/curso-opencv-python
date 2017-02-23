@@ -1,6 +1,6 @@
 FROM andrewosh/binder-base
 
-MAINTAINER Raymond Speth <speth@mit.edu>
+MAINTAINER FJ Navarro <fj.navarro[a]ua.es>
 
 USER root
 
