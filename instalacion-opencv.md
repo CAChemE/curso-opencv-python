@@ -25,7 +25,7 @@ Testeado en Windows 7 x64:
  
 4. Instalación de librerías auxiliares para el curso
 
-  `conda install jupyter matplotlib scipy`
+  `conda install jupyter matplotlib`
   
 5. [Descarga este repositorio](https://github.com/CAChemE/curso-opencv-python/archive/master.zip) y comprueba que eres capaz de ejecutar el script `test_playvideo.py`
 
