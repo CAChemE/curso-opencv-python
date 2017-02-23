@@ -3,7 +3,7 @@ Comandos para instalar OpenCV con miniconda ([DOC](https://conda.io/docs/using/e
 Testeado en Windows 7 x64:
 
 
-0. Si aún no tienes Anaconda o miniconda instalado en tu ordenador: descarga e instala [miniconda con Python 3.5 (64-bit)](https://conda.io/miniconda.html)
+0. Si aún no tienes Anaconda o miniconda instalado en tu ordenador: descarga e instala [miniconda con Python 3.x (64-bit)](https://conda.io/miniconda.html)
   
 1. Actualiza conda a la última versión disponible y crea un entorno desde la ventana de comandos o terminal:
 
